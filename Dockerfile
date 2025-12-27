@@ -24,6 +24,5 @@ RUN pecl install xdebug-3.5.0 \
 
 # PHP configuration
 RUN mv $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini
-RUN echo "register_argc_argv=On" > $PHP_INI_DIR/conf.d/custom.ini
 
 WORKDIR /app
