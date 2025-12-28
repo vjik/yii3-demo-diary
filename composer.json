@@ -32,6 +32,7 @@
             "@php ./yii serve"
         ],
         "test": "php -d register_argc_argv=On vendor/bin/codecept run",
+        "codecept-build": "php -d register_argc_argv=On vendor/bin/codecept build",
         "psalm": "psalm",
         "cs-fix": "php-cs-fixer fix --config=.php-cs-fixer.php --diff",
         "rector": "rector",

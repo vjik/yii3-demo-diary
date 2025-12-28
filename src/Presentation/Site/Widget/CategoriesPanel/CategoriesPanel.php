@@ -13,14 +13,14 @@ final class CategoriesPanel extends Widget
     public function __construct(
         /** @var list<Category> */
         private readonly array $categories,
-        private readonly int|null $currentCategoryId,
+        private readonly ?int $currentCategoryId,
         private readonly WebView $view,
     ) {}
 
     /**
      * @param list<Category> $categories
      */
-    public static function create(array $categories, int|null $currentCategoryId = null): self
+    public static function create(array $categories, ?int $currentCategoryId = null): self
     {
         return self::widget([$categories, $currentCategoryId]);
     }

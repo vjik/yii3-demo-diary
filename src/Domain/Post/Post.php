@@ -25,7 +25,7 @@ final class Post extends ActiveRecord
     public string $title;
     public string $body;
     public string $slug;
-    public DateTimeImmutable|null $publication_date = null;
+    public ?DateTimeImmutable $publication_date = null;
     public DateTimeImmutable $created_at;
     public int $created_by;
     public DateTimeImmutable $updated_at;

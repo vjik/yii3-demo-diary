@@ -17,5 +17,5 @@ final class Input extends AbstractInput
     public int $page = 1;
 
     #[Safe]
-    public int|null $categoryId = null;
+    public ?int $categoryId = null;
 }
