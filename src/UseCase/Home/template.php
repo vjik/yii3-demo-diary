@@ -66,5 +66,25 @@ $this->setTitle('Welcome to Yii3 Demo Diary');
                 </div>
             </div>
         </div>
+        <div class="mt-5">
+            <h4 class="mb-3">API Endpoints</h4>
+            <p class="mb-3">Explore the available API endpoints:</p>
+            <div class="list-group mx-auto" style="max-width: 600px;">
+                <a href="/api/diary/category/list" class="list-group-item list-group-item-action" target="_blank" rel="noopener noreferrer">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1"><i class="bi bi-folder me-2"></i>Category List</h6>
+                        <small class="text-muted">GET</small>
+                    </div>
+                    <small class="text-muted">/api/diary/category/list</small>
+                </a>
+                <a href="/api/diary/post/list" class="list-group-item list-group-item-action" target="_blank" rel="noopener noreferrer">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1"><i class="bi bi-file-text me-2"></i>Post List</h6>
+                        <small class="text-muted">GET</small>
+                    </div>
+                    <small class="text-muted">/api/diary/post/list</small>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
