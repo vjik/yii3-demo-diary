@@ -23,7 +23,7 @@ use Yiisoft\Yii\Console\ExitCode;
     name: 'user:create-admin',
     description: 'Create a new administrator',
 )]
-final class Action extends Command
+final class CreateAdminCommand extends Command
 {
     public function __construct(
         private readonly ValidatorInterface $validator,

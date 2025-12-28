@@ -27,7 +27,7 @@ use Yiisoft\Yii\Console\ExitCode;
     name: 'fake-data',
     description: 'Fill database with fake data',
 )]
-final class Action extends Command
+final class FakeDataCommand extends Command
 {
     private const string ADMIN_LOGIN = 'admin';
     private const string ADMIN_PASSWORD = 'q1w2e3r4';
