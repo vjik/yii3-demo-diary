@@ -20,7 +20,7 @@ final class Post extends ActiveRecord
     public const int MAX_TITLE_LENGTH = 255;
     public const int MAX_SLUG_LENGTH = 255;
 
-    protected ?int $id = null;
+    protected int $id;
     public PostStatus $status = PostStatus::Draft;
     public string $title;
     public string $body;
@@ -42,7 +42,7 @@ final class Post extends ActiveRecord
     public function getCategories(): array
     {
         /** @var Category[] */
-        return $this->relationQuery('categories')->all();
+        return $this->relation('categories');
     }
 
     public function getCreatedByUser(): User
@@ -84,13 +84,9 @@ final class Post extends ActiveRecord
 
     protected function populateProperty(string $name, mixed $value): void
     {
-        switch ($name) {
-            case 'status':
-                $this->status = PostStatus::from((int) $value);
-                break;
-
-            default:
-                parent::populateProperty($name, $value);
-        }
+        match ($name) {
+            'status' => $this->status = PostStatus::from((int) $value),
+            default => parent::populateProperty($name, $value),
+        };
     }
 }
